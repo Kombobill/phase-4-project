@@ -4,11 +4,8 @@ Rails.application.routes.draw do
   resources :nurses
   resources :doctors
 
-
+  #sessions
   get '/login', to: 'sessions#create'
-  
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get '/logout', to: 'sessions#destroy'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
 end

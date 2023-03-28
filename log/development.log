@@ -546,3 +546,10 @@ Processing by SessionsController#create as */*
 Completed 201 Created in 266ms (Views: 9.6ms | ActiveRecord: 1.7ms | Allocations: 12823)
 
 
+Started GET "/logout" for 127.0.0.1 at 2023-03-28 15:07:12 +0300
+Processing by SessionsController#destroy as */*
+  Parameters: {"name"=>"osora", "password"=>"[FILTERED]", "session"=>{"name"=>"osora", "password"=>"[FILTERED]"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 103ms (Views: 103.0ms | Allocations: 2621)
+
+

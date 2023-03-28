@@ -11,7 +11,8 @@ class SessionsController < ApplicationController
     end
 
     def destroy
-
+        session.delete :patient_id
+        render json: {message: "user has logged out"}, status: 200
     end
 
     private
