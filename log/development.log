@@ -553,3 +553,57 @@ Processing by SessionsController#destroy as */*
 Completed 200 OK in 103ms (Views: 103.0ms | Allocations: 2621)
 
 
+Started GET "/login" for 127.0.0.1 at 2023-03-28 15:08:07 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"osora", "password"=>"[FILTERED]", "session"=>{"name"=>"osora", "password"=>"[FILTERED]"}}
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."name" = ? LIMIT ?[0m  [["name", "osora"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 404 Not Found in 260ms (Views: 0.5ms | ActiveRecord: 1.2ms | Allocations: 8150)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-28 15:08:20 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"osora", "password"=>"[FILTERED]", "session"=>{"name"=>"osora", "password"=>"[FILTERED]"}}
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."name" = ? LIMIT ?[0m  [["name", "osora"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+[active_model_serializers]   [1m[36mNurse Load (0.1ms)[0m  [1m[34mSELECT "nurses".* FROM "nurses" WHERE "nurses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:7:in `create'
+[active_model_serializers] Rendered PatientSerializer with ActiveModelSerializers::Adapter::Attributes (8.68ms)
+Completed 201 Created in 259ms (Views: 9.3ms | ActiveRecord: 0.6ms | Allocations: 6946)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-28 15:08:27 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"brian", "password"=>"[FILTERED]", "session"=>{"name"=>"brian", "password"=>"[FILTERED]"}}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."name" = ? LIMIT ?[0m  [["name", "brian"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 404 Not Found in 4ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 595)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-28 15:12:50 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"brian", "condition"=>"fever", "password"=>"[FILTERED]", "session"=>{"name"=>"brian", "condition"=>"fever", "password"=>"[FILTERED]"}}
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."name" = ? LIMIT ?[0m  [["name", "brian"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 404 Not Found in 8ms (Views: 1.0ms | ActiveRecord: 0.6ms | Allocations: 7131)
+
+
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 15:13:01 +0300
+Processing by PatientsController#create as */*
+  Parameters: {"name"=>"brian", "condition"=>"fever", "password"=>"[FILTERED]", "patient"=>{"name"=>"brian", "condition"=>"fever"}}
+[31mUnpermitted parameter: :patient. Context: { controller: PatientsController, action: create, request: #<ActionDispatch::Request:0x00007f5075401ad8>, params: {"name"=>"brian", "condition"=>"fever", "password"=>"[FILTERED]", "controller"=>"patients", "action"=>"create", "patient"=>{"name"=>"brian", "condition"=>"fever"}} }[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 422 Unprocessable Entity in 511ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 353690)
+
+
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 15:13:50 +0300
+Processing by PatientsController#create as */*
+  Parameters: {"name"=>"brian", "condition"=>"fever", "nurse"=>1, "patient"=>{"name"=>"brian", "condition"=>"fever"}}
+[31mUnpermitted parameters: :nurse, :patient. Context: { controller: PatientsController, action: create, request: #<ActionDispatch::Request:0x00007f5070044210>, params: {"name"=>"brian", "condition"=>"fever", "nurse"=>1, "controller"=>"patients", "action"=>"create", "patient"=>{"name"=>"brian", "condition"=>"fever"}} }[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 422 Unprocessable Entity in 4ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2628)
+
+
