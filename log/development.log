@@ -519,3 +519,30 @@ Processing by PatientsController#create as */*
 Completed 201 Created in 537ms (Views: 142.8ms | ActiveRecord: 132.7ms | Allocations: 14822)
 
 
+Started POST "/login" for 127.0.0.1 at 2023-03-28 15:04:06 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+Started GET "/login" for 127.0.0.1 at 2023-03-28 15:04:13 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"osora", "password"=>"[FILTERED]", "session"=>{"name"=>"osora", "password"=>"[FILTERED]"}}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."name" = ? LIMIT ?[0m  [["name", "osora"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 0.7ms | Allocations: 8560)
+
+
+  
+NoMethodError (undefined method `patient_id' for #<Patient:0x00007f5075646190>):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started GET "/login" for 127.0.0.1 at 2023-03-28 15:04:38 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"osora", "password"=>"[FILTERED]", "session"=>{"name"=>"osora", "password"=>"[FILTERED]"}}
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."name" = ? LIMIT ?[0m  [["name", "osora"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+[active_model_serializers]   [1m[36mNurse Load (0.1ms)[0m  [1m[34mSELECT "nurses".* FROM "nurses" WHERE "nurses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:7:in `create'
+[active_model_serializers] Rendered PatientSerializer with ActiveModelSerializers::Adapter::Attributes (8.93ms)
+Completed 201 Created in 266ms (Views: 9.6ms | ActiveRecord: 1.7ms | Allocations: 12823)
+
+
