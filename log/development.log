@@ -607,3 +607,49 @@ Processing by PatientsController#create as */*
 Completed 422 Unprocessable Entity in 4ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2628)
 
 
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 15:18:35 +0300
+Processing by PatientsController#create as */*
+  Parameters: {"name"=>"brianosora.", "condition"=>"fever", "nurse"=>1, "password"=>"[FILTERED]", "patient"=>{"name"=>"brianosora.", "condition"=>"fever"}}
+[31mUnpermitted parameters: :nurse, :patient. Context: { controller: PatientsController, action: create, request: #<ActionDispatch::Request:0x00007f50754b5fb0>, params: {"name"=>"brianosora.", "condition"=>"fever", "nurse"=>1, "password"=>"[FILTERED]", "controller"=>"patients", "action"=>"create", "patient"=>{"name"=>"brianosora.", "condition"=>"fever"}} }[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 253ms (Views: 0.9ms | ActiveRecord: 1.0ms | Allocations: 7161)
+
+
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 15:18:42 +0300
+Processing by PatientsController#create as */*
+  Parameters: {"name"=>"brianosora.", "condition"=>"fever", "nurse_id"=>1, "password"=>"[FILTERED]", "patient"=>{"name"=>"brianosora.", "condition"=>"fever", "nurse_id"=>1}}
+[31mUnpermitted parameter: :patient. Context: { controller: PatientsController, action: create, request: #<ActionDispatch::Request:0x00005557cf1f4e20>, params: {"name"=>"brianosora.", "condition"=>"fever", "nurse_id"=>1, "password"=>"[FILTERED]", "controller"=>"patients", "action"=>"create", "patient"=>{"name"=>"brianosora.", "condition"=>"fever", "nurse_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/patients_controller.rb:6:in `create'
+  [1m[36mNurse Load (0.1ms)[0m  [1m[34mSELECT "nurses".* FROM "nurses" WHERE "nurses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:6:in `create'
+  [1m[36mPatient Create (0.2ms)[0m  [1m[32mINSERT INTO "patients" ("name", "condition", "nurse_id", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "brianosora."], ["condition", "fever"], ["nurse_id", 1], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-28 12:18:43.066806"], ["updated_at", "2023-03-28 12:18:43.066806"]]
+  ↳ app/controllers/patients_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (144.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/patients_controller.rb:6:in `create'
+[active_model_serializers] Rendered PatientSerializer with ActiveModelSerializers::Adapter::Attributes (6.17ms)
+Completed 201 Created in 418ms (Views: 10.4ms | ActiveRecord: 145.3ms | Allocations: 6737)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-03-28 15:18:57 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"name"=>"brianosora.", "password"=>"[FILTERED]", "session"=>{"name"=>"brianosora.", "password"=>"[FILTERED]"}}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."name" = ? LIMIT ?[0m  [["name", "brianosora."], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+[active_model_serializers]   [1m[36mNurse Load (0.1ms)[0m  [1m[34mSELECT "nurses".* FROM "nurses" WHERE "nurses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:7:in `create'
+[active_model_serializers] Rendered PatientSerializer with ActiveModelSerializers::Adapter::Attributes (1.82ms)
+Completed 201 Created in 249ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 1825)
+
+
+Started POST "/logout" for 127.0.0.1 at 2023-03-28 15:19:17 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/logout"):
+  
+Started DELETE "/logout" for 127.0.0.1 at 2023-03-28 15:19:23 +0300
+Processing by SessionsController#destroy as */*
+  Parameters: {"name"=>"brianosora.", "password"=>"[FILTERED]", "session"=>{"name"=>"brianosora.", "password"=>"[FILTERED]"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 157)
+
+
