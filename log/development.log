@@ -1,0 +1,521 @@
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 14:21:33 +0300
+  [1m[35m (186.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (110.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 4 pending migrations:
+
+20230328092534_create_doctors.rb
+20230328092558_create_nurses.rb
+20230328092929_create_patients.rb
+20230328093050_create_appointments.rb
+
+
+):
+  
+activerecord (7.0.4.3) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4.3) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4.3) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4.3) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 14:34:58 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 4 pending migrations:
+
+20230328092534_create_doctors.rb
+20230328092558_create_nurses.rb
+20230328092929_create_patients.rb
+20230328093050_create_appointments.rb
+
+
+):
+  
+activerecord (7.0.4.3) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4.3) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4.3) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4.3) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDoctors (20230328092534)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "doctors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "speciality" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328092534"]]
+  [1m[36mTRANSACTION (96.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateNurses (20230328092558)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "nurses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "phone" varchar, "relation" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328092558"]]
+  [1m[36mTRANSACTION (102.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePatients (20230328092929)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "patients" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "condition" varchar, "nurse_id" integer NOT NULL, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_8ea02e5dc7"
+FOREIGN KEY ("nurse_id")
+  REFERENCES "nurses" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_patients_on_nurse_id" ON "patients" ("nurse_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328092929"]]
+  [1m[36mTRANSACTION (92.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAppointments (20230328093050)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "patient_id" integer NOT NULL, "doctor_id" integer NOT NULL, "date" varchar, "duration" varchar, "appointment_type" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c63da04ab4"
+FOREIGN KEY ("patient_id")
+  REFERENCES "patients" ("id")
+, CONSTRAINT "fk_rails_8db8e1e8a5"
+FOREIGN KEY ("doctor_id")
+  REFERENCES "doctors" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_appointments_on_patient_id" ON "appointments" ("patient_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_appointments_on_doctor_id" ON "appointments" ("doctor_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328093050"]]
+  [1m[36mTRANSACTION (94.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-28 11:35:18.114968"], ["updated_at", "2023-03-28 11:35:18.114968"]]
+  [1m[36mTRANSACTION (77.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 14:35:23 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PatientsController#create as */*
+  Parameters: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.8ms | Allocations: 458)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.4.3) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.4.3) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.4.3) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+rack (2.2.6.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 14:36:34 +0300
+Processing by PatientsController#create as */*
+  Parameters: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}}
+[31mUnpermitted parameter: :patient. Context: { controller: PatientsController, action: create, request: #<ActionDispatch::Request:0x00007f54b48f6f50>, params: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "controller"=>"patients", "action"=>"create", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}} }[0m
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.8ms | Allocations: 16386)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'password' for Patient.):
+  
+app/controllers/patients_controller.rb:3:in `create'
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 14:37:30 +0300
+Processing by PatientsController#create as */*
+  Parameters: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}}
+[31mUnpermitted parameter: :patient. Context: { controller: PatientsController, action: create, request: #<ActionDispatch::Request:0x00007f54b0b36da0>, params: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "controller"=>"patients", "action"=>"create", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}} }[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.2ms | Allocations: 2114)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'password' for Patient.):
+  
+app/controllers/patients_controller.rb:3:in `create'
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 14:40:21 +0300
+Processing by PatientsController#create as */*
+  Parameters: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}}
+[31mUnpermitted parameter: :patient. Context: { controller: PatientsController, action: create, request: #<ActionDispatch::Request:0x00007f549c97ac28>, params: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "controller"=>"patients", "action"=>"create", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}} }[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.8ms | Allocations: 2094)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'password' for Patient.):
+  
+app/controllers/patients_controller.rb:3:in `create'
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 14:40:32 +0300
+Processing by PatientsController#create as */*
+  Parameters: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}}
+[31mUnpermitted parameter: :patient. Context: { controller: PatientsController, action: create, request: #<ActionDispatch::Request:0x00007f54b0fa5d78>, params: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "controller"=>"patients", "action"=>"create", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}} }[0m
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 638)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'password' for Patient.):
+  
+app/controllers/patients_controller.rb:3:in `create'
+Started GET "/patients" for 127.0.0.1 at 2023-03-28 14:40:37 +0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PatientsController):
+  
+actionpack (7.0.4.3) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+rack (2.2.6.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 14:40:48 +0300
+Processing by PatientsController#create as */*
+  Parameters: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}}
+[31mUnpermitted parameter: :patient. Context: { controller: PatientsController, action: create, request: #<ActionDispatch::Request:0x00007f54b4a82e50>, params: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "controller"=>"patients", "action"=>"create", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}} }[0m
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 638)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'password' for Patient.):
+  
+app/controllers/patients_controller.rb:3:in `create'
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 14:41:40 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PatientsController#create as */*
+  Parameters: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}}
+[31mUnpermitted parameter: :patient. Context: { controller: PatientsController, action: create, request: #<ActionDispatch::Request:0x00007fcfdc9d8448>, params: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "controller"=>"patients", "action"=>"create", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}} }[0m
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.5ms | Allocations: 16445)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'password' for Patient.):
+  
+app/controllers/patients_controller.rb:3:in `create'
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 14:43:52 +0300
+Processing by PatientsController#create as */*
+  Parameters: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}}
+[31mUnpermitted parameter: :patient. Context: { controller: PatientsController, action: create, request: #<ActionDispatch::Request:0x00007fcfd415f3a0>, params: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "controller"=>"patients", "action"=>"create", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}} }[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.0ms | Allocations: 2153)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'password' for Patient.):
+  
+app/controllers/patients_controller.rb:4:in `create'
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 14:44:14 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PatientsController#create as */*
+  Parameters: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}}
+[31mUnpermitted parameter: :patient. Context: { controller: PatientsController, action: create, request: #<ActionDispatch::Request:0x00007faff09cff48>, params: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "controller"=>"patients", "action"=>"create", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}} }[0m
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.6ms | Allocations: 16445)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'password' for Patient.):
+  
+app/controllers/patients_controller.rb:4:in `create'
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 14:45:32 +0300
+Processing by PatientsController#create as */*
+  Parameters: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}}
+[31mUnpermitted parameter: :patient. Context: { controller: PatientsController, action: create, request: #<ActionDispatch::Request:0x00007fafe8176bd8>, params: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "controller"=>"patients", "action"=>"create", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+  [1m[36mNurse Load (0.1ms)[0m  [1m[34mSELECT "nurses".* FROM "nurses" WHERE "nurses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 4496ms (ActiveRecord: 1.4ms | Allocations: 1036351)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Nurse must exist):
+  
+app/controllers/patients_controller.rb:4:in `create'
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 14:46:52 +0300
+Processing by PatientsController#create as */*
+  Parameters: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}}
+[31mUnpermitted parameter: :patient. Context: { controller: PatientsController, action: create, request: #<ActionDispatch::Request:0x00007fafeb328e38>, params: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "controller"=>"patients", "action"=>"create", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+  [1m[36mNurse Load (0.1ms)[0m  [1m[34mSELECT "nurses".* FROM "nurses" WHERE "nurses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 252ms (ActiveRecord: 0.2ms | Allocations: 2997)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Nurse must exist):
+  
+app/controllers/patients_controller.rb:4:in `create'
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 14:48:15 +0300
+Processing by PatientsController#create as */*
+  Parameters: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}}
+[31mUnpermitted parameter: :patient. Context: { controller: PatientsController, action: create, request: #<ActionDispatch::Request:0x00007fafe87de750>, params: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>3, "password"=>"[FILTERED]", "controller"=>"patients", "action"=>"create", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>3}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+  [1m[36mNurse Load (0.1ms)[0m  [1m[34mSELECT "nurses".* FROM "nurses" WHERE "nurses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 252ms (ActiveRecord: 0.2ms | Allocations: 2997)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Nurse must exist):
+  
+app/controllers/patients_controller.rb:4:in `create'
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 14:49:03 +0300
+Processing by PatientsController#create as */*
+  Parameters: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>1, "password"=>"[FILTERED]", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>1}}
+[31mUnpermitted parameter: :patient. Context: { controller: PatientsController, action: create, request: #<ActionDispatch::Request:0x00007fafe9db5f10>, params: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>1, "password"=>"[FILTERED]", "controller"=>"patients", "action"=>"create", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+  [1m[36mNurse Load (0.1ms)[0m  [1m[34mSELECT "nurses".* FROM "nurses" WHERE "nurses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+Completed 422 Unprocessable Entity in 250ms (ActiveRecord: 0.3ms | Allocations: 2997)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Nurse must exist):
+  
+app/controllers/patients_controller.rb:4:in `create'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNurse Create (0.3ms)[0m  [1m[32mINSERT INTO "nurses" ("name", "phone", "relation", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Dorothy"], ["phone", "0712345678"], ["relation", "Mother"], ["created_at", "2023-03-28 11:53:47.357319"], ["updated_at", "2023-03-28 11:53:47.357319"]]
+  [1m[36mTRANSACTION (134.0ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 14:54:06 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PatientsController#create as */*
+  Parameters: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>1, "password"=>"[FILTERED]", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>1}}
+[31mUnpermitted parameter: :patient. Context: { controller: PatientsController, action: create, request: #<ActionDispatch::Request:0x00005557ced726e0>, params: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>1, "password"=>"[FILTERED]", "controller"=>"patients", "action"=>"create", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+  [1m[36mNurse Load (0.1ms)[0m  [1m[34mSELECT "nurses".* FROM "nurses" WHERE "nurses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+  [1m[36mPatient Create (0.4ms)[0m  [1m[32mINSERT INTO "patients" ("name", "condition", "nurse_id", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "osora"], ["condition", "fever"], ["nurse_id", 1], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-28 11:54:06.570668"], ["updated_at", "2023-03-28 11:54:06.570668"]]
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (99.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+Completed 500 Internal Server Error in 410ms (ActiveRecord: 101.6ms | Allocations: 41814)
+
+
+  
+NameError (undefined local variable or method `sessions' for #<PatientsController:0x0000000000b360>
+Did you mean?  session):
+  
+app/controllers/patients_controller.rb:5:in `create'
+Started POST "/patients" for 127.0.0.1 at 2023-03-28 14:54:37 +0300
+Processing by PatientsController#create as */*
+  Parameters: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>1, "password"=>"[FILTERED]", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>1}}
+[31mUnpermitted parameter: :patient. Context: { controller: PatientsController, action: create, request: #<ActionDispatch::Request:0x00007f506c184160>, params: {"name"=>"osora", "condition"=>"fever", "nurse_id"=>1, "password"=>"[FILTERED]", "controller"=>"patients", "action"=>"create", "patient"=>{"name"=>"osora", "condition"=>"fever", "nurse_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+  [1m[36mNurse Load (0.1ms)[0m  [1m[34mSELECT "nurses".* FROM "nurses" WHERE "nurses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+  [1m[36mPatient Create (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("name", "condition", "nurse_id", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "osora"], ["condition", "fever"], ["nurse_id", 1], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-28 11:54:37.799208"], ["updated_at", "2023-03-28 11:54:37.799208"]]
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (131.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/patients_controller.rb:4:in `create'
+[active_model_serializers] Rendered PatientSerializer with ActiveModelSerializers::Adapter::Attributes (9.91ms)
+Completed 201 Created in 537ms (Views: 142.8ms | ActiveRecord: 132.7ms | Allocations: 14822)
+
+
