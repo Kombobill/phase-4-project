@@ -1,7 +1,17 @@
 class PatientsController < ApplicationController
 
-rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
-rescue_from ActiveRecord::RecordInvalid, with: :record_is_invalid
+    rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+    rescue_from ActiveRecord::RecordInvalid, with: :record_is_invalid
+
+    def index
+        patient = Patient.all
+        render json: patient
+    end
+
+    def show
+        patient = Patient.find(session[:patient_id])
+        render json: patient, status: 200
+    end
    
     def create
         patient = Patient.create!(patient_params)
