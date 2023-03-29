@@ -1,2 +1,4 @@
 /tmp/cache
 /log/development.log
+/db
+/tmp/pid
