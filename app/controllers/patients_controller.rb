@@ -1,11 +1,18 @@
 class PatientsController < ApplicationController
+
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
   rescue_from ActiveRecord::RecordInvalid, with: :record_is_invalid
+  before_action :authorized, only: [:show]
 
   def create
     patient = Patient.create!(patient_params)
     session[:patient_id] = patient.id
     render json: patient, status: :created
+  end
+
+  def show
+    patient = Patient.find(session[:patient_id])
+    render json: patient, status: 200
   end
 
   def reset_password
