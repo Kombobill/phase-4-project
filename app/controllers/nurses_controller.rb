@@ -1,8 +1,10 @@
 class NursesController < ApplicationController
-    
+
     rescue_from ActiveRecord::RecordInvalid, with: :render_record_invalid_response
 
     rescue_from ActiveRecord::RecordNotFound, with: :render_nurse_not_found_response
+
+    before_action :authorized
 
     def index
       nurses = Nurse.all

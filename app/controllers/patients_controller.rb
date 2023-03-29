@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-
+ 
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
   rescue_from ActiveRecord::RecordInvalid, with: :record_is_invalid
   before_action :authorized, only: [:show]

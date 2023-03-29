@@ -1,6 +1,9 @@
 class AppointmentsController < ApplicationController
+  
     rescue_from ActiveRecord::RecordInvalid,with: :render_record_invalid_response
 
+    before_action :authorized
+    
     def index
       appointment = Appointment.all
       render json: appointment, status: :ok
