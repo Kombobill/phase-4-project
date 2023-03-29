@@ -1,8 +1,79 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
-Nurse.create(name: "Dorothy", phone: '0712345678', relation: 'Mother')
+puts 'Seeding nurses:'
+6.times do
+  Nurse.create!(
+    [
+      {
+        name: Faker::Name.name,
+        phone: Faker::PhoneNumber.cell_phone_in_e164,
+        speciality: [
+          'Registered Nurse',
+          'Clinical Nurse Specialist',
+          'Critical Care Nurse',
+          'ER Nurse',
+          'Geriatric Nursing',
+          'Mental Health Nurse',
+        ].sample,
+      },
+    ],
+  )
+end
+
+puts 'Seeding doctors'
+5.times do
+  Doctor.create!(
+    [
+      {
+        name: Faker::Name.name,
+        speciality: [
+          'Dermatology',
+          'Cardiology',
+          'Family Medicine',
+          'General Surgery',
+          'Hematology',
+          'Ophthalmology',
+          'Psychiatry',
+        ].sample,
+      },
+    ],
+  )
+end
+
+puts 'Seeding patients...'
+20.times do
+  Patient.create!(
+    [
+      {
+        name: Faker::Name.name,
+        condition: [
+          'Bacterial vaginosis',
+          'Acne',
+          'Depression',
+          'Allergies',
+          'Malaria',
+        ].sample,
+        nurse_id: rand(1..6),
+        password: Faker::Internet.password(min_length: 8, max_length: 10),
+      },
+    ],
+  )
+end
+
+puts 'Seeding Appointments...'
+10.times do
+  Appointment.create!(
+    [
+      {
+        patient_id: rand(1...10),
+        doctor_id: rand(1...5),
+        date: Faker::Date.forward(days: 23),
+        duration: "#{rand(10...30)} minutes",
+        appointment_type: [
+          'Routine Care',
+          'Follow-Up',
+          'Urgent Visit',
+          'Consultation',
+        ].sample,
+      },
+    ],
+  )
+end
