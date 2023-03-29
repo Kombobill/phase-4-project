@@ -45,10 +45,6 @@ class AppointmentsController < ApplicationController
              },
              status: :unprocessable_entity
     end
-<<<<<<< HEAD
-  end
+
+   
 end
-=======
-  
-end
->>>>>>> 206e9e01d606455b2ec89ab46bf8e3321f176ec0
