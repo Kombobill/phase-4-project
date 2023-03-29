@@ -1,7 +1,5 @@
 class AppointmentsController < ApplicationController
-  class AppointmentsController < ApplicationController
-    rescue_from ActiveRecord::RecordInvalid,
-                with: :render_record_invalid_response
+    rescue_from ActiveRecord::RecordInvalid,with: :render_record_invalid_response
 
     def index
       appointment = Appointment.all
@@ -47,5 +45,10 @@ class AppointmentsController < ApplicationController
              },
              status: :unprocessable_entity
     end
+<<<<<<< HEAD
   end
 end
+=======
+  
+end
+>>>>>>> 206e9e01d606455b2ec89ab46bf8e3321f176ec0
