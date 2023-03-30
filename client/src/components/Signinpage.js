@@ -22,8 +22,8 @@ export default function SignInPage() {
                     <Link to="/homepage"></Link></button>
 
             </form>
-            <footer >
-                <p className="paragraph">? <Link to="/register">Create an account</Link>.</p>
+            <footer 
+                 className="paragraph">? <Link to="/register">Create an account</Link>.
                 <p><Link to="/">Back to login</Link>.</p>
             </footer>
         </div>
