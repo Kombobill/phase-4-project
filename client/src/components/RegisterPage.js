@@ -9,7 +9,6 @@ export default function SignUpPage() {
      <div className="reg">
         <div className="text-center m-5-auto">
             <h2 className="sign">Sign in</h2>
-            <h5 className="create">Create your personal account</h5>
             <form className="sign-form" action="/home">
                 <p>
                     <label className="user">Username</label><br/>
