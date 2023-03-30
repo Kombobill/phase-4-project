@@ -5,4 +5,5 @@ class DoctorsController < ApplicationController
     doctor = Doctor.all
     render json: doctor, status: :ok
   end
+  
 end
