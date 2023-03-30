@@ -14,7 +14,7 @@ export default function SignInPage() {
                     <label ClassName="labels">Password</label><br></br>
                     <input className="text-area2" type="text" placeholder="Enter password" /><br></br>
 
-                    <Link to="/forget-password"><label className="labels2">Forget password?</label></Link>
+                    <Link to="/forget-password"><label className="labels2">Forgot password?</label></Link>
                               <p> <Link to="/register">Create an account</Link>.</p>
 
                 <p className="paragraph">

@@ -9,12 +9,12 @@ export default function SignInPage() {
             <form className="form" action="/homepage">
                 <p className="paragraph">
                     <label className="labels">Username</label><br/>
-                    <input type="text" name="first_name" required />
+                    <input type="text" placeholder="enter username" required />
                 </p>
                 <p className="paragraph">
                     <label ClassName="labels">Password</label>
                     <Link to="/forget-password">
-                        <label className="right-label">Forget password?</label></Link>
+                        <label className="right-label"></label></Link>
                     <br/>
                     <input type="password" name="password" required />
                 </p>

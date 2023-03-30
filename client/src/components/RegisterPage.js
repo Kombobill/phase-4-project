@@ -16,7 +16,7 @@ export default function SignUpPage() {
                 </p>
                 <p>
                     <label className="user">Password</label><br/>
-                    <input  className="text-area3"type="text" placeholder="Enter password" required/>
+                    <input  className="text-area3"type="text" placeholder=" password" required/>
                 </p>
                 <p>
                     <label className="user">Medical condition</label><br/>
