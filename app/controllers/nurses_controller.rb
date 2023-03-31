@@ -4,7 +4,7 @@ class NursesController < ApplicationController
 
     rescue_from ActiveRecord::RecordNotFound, with: :render_nurse_not_found_response
 
-    before_action :authorized
+    before_action :authorized, except: [:index]
 
     def index
       nurses = Nurse.all
