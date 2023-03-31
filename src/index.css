@@ -1,0 +1,135 @@
+*{
+  background-color:rgb(219, 216, 211);
+  }
+  .form{
+    padding: 4rem 3rem;
+    box-shadow: rgba(9, 103, 226, 0.24) 0px 3px 8px;
+    width: 30%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column
+
+
+  }
+  .login-form{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .title-sign{
+text-align:center;
+margin-top:15%;
+  }
+  .labels{
+font-style: normal; 
+font-size: medium;
+ }
+ .labels2{
+  font-style: normal; 
+  font-size: medium;
+   }
+ .paragraph{
+  font-style: normal; 
+  font-size: x-large;
+ }
+ 
+.sub_btn{
+  background-color: rgb(140, 160, 205);;
+  padding: 6px 12px;
+  border: 1px solid rgb(53, 98, 86);
+  border-radius: 10px;
+  
+}
+.text-area{
+  width: 100%;
+  height: 50%; /* adjust the height to your desired size */
+  resize: none; 
+  padding: 4px 6px;
+  border-radius: 6px;
+  border: 1px solid black;
+  background-color: rgb(222, 222, 209);
+
+}
+.text-area2{
+  width: 100%;
+  height: 50%; /* adjust the height to your desired size */
+  resize: none; 
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:20px;
+  border-radius: 6px;
+  border: 1px solid black;
+  background-color: rgb(222, 222, 209);
+
+}
+.reg{
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  margin-top:60px;
+}
+.sign{
+  text-align:center;
+  margin-top:15%;
+}
+.sign-form{
+  padding: 4rem 3rem;
+    box-shadow: rgba(9, 103, 226, 0.24) 0px 3px 8px;
+    width: 30%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column
+
+}
+.user{
+  font-style: normal; 
+  font-size: medium;
+  margin-bottom: 0px;
+}
+.text-area3{
+  width: 100%;
+  height: 50%; /* adjust the height to your desired size */
+  resize: none; 
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:20px;
+  border-radius: 6px;
+  border: 1px solid black;
+  background-color: rgb(222, 222, 209);
+}
+.forget{
+  padding: 4rem 3rem;
+  box-shadow: rgba(9, 103, 226, 0.24) 0px 3px 8px;
+  width: 30%;
+  min-width: 300px;
+  margin-left:32%;
+  margin-top:10%;
+  display: flex;
+  flex-direction: column
+}
+.reset-p{
+font-style: italic;  
+}
+.text-area4{
+  width: 100%;
+  height: 50%; /* adjust the height to your desired size */
+  resize: none; 
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:20px;
+  border-radius: 6px;
+  border: 1px solid black;
+  background-color: rgb(222, 222, 209);
+
+}
+.sub_btn4{
+  background-color: rgb(140, 160, 205);;
+  padding: 6px 12px;
+  border: 1px solid rgb(53, 98, 86);
+  border-radius: 10px;
+}
