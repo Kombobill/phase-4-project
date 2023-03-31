@@ -6,8 +6,7 @@
     box-shadow: rgba(9, 103, 226, 0.24) 0px 3px 8px;
     width: 30%;
     min-width: 300px;
-    display: flex;
-    flex-direction: column
+    margin-left: 35%;
 
 
   }
@@ -21,7 +20,7 @@
   }
   .title-sign{
 text-align:center;
-margin-top:15%;
+margin-top:50px;
   }
   .labels{
 font-style: normal; 
@@ -41,6 +40,7 @@ font-size: medium;
   padding: 6px 12px;
   border: 1px solid rgb(53, 98, 86);
   border-radius: 10px;
+  margin-top:20px;
   
 }
 .text-area{
@@ -132,4 +132,7 @@ font-style: italic;
   padding: 6px 12px;
   border: 1px solid rgb(53, 98, 86);
   border-radius: 10px;
+}
+.for-pass{
+  text-align: center;
 }

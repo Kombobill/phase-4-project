@@ -1,31 +1,80 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
-export default function SignInPage() {
-    return (
-        <div className="text-center login-body m-5 auto">
-        <div className="login-form">
-            <h2 className="title-sign">Log in </h2>
-            <form className="form" action="/home">
-                <p className="paragraph">
-                    <label className="labels">Username </label><br/>
-                    <input className="text-area"type="text" placeholder="Enter username" />
-                </p>
-                    <label ClassName="labels">Password</label><br></br>
-                    <input className="text-area2" type="text" placeholder="Enter password" /><br></br>
+function Login({ onLogin }) {
+  const [name, setName] = useState('');
+  const [password, setPassword] = useState('');
+  const [errors, setErrors] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [success, setSuccess] = useState(null);
 
-                    <Link to="/forget-password"><label className="labels2">Forgot password?</label></Link>
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setIsLoading(true);
+    fetch(`/login`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, password }),
+    }).then((r) => {
+      setIsLoading(false);
+      if (r.ok) {
+        r.json().then((user) => {
+          onLogin(user);
+          setSuccess(user);
+        });
+      } else {
+        r.json().then((err) => {
+          setErrors(err.errors);
+          console.log(err);
+        });
+      }
+    });
+    setName('');
+    setPassword('');
+  }
+
+  if (success === !null) return <NavLink to={'/me'} />;
+
+  return (
+    <div>
+      <h1 className="title-sign">Login</h1>
+      <form className="form" onSubmit={handleSubmit}>
+        <label className="labels" htmlFor='username'>Username</label>
+        <input className="text-area"
+          type='text'
+          id='username'
+          autoComplete='off'
+          placeholder='e.g Joe'
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+
+        <label ClassName="labels" htmlFor='password'>Password</label>
+        <input className="text-area"
+          type='password'
+          id='password'
+          autoComplete='current-password'
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+
+        <button className="sub_btn" type='submit'>{isLoading ? 'Loading...' : 'Login'}</button>
+
+        {errors.map((err) => (
+          <li key={err}>{err}</li>
+        ))}
+      </form>
+      <div className="for-pass" >
+      <Link to="/forget-password"><label className="labels2">Forgot password?</label></Link>
                               <p> <Link to="/register">Create an account</Link>.</p>
-
-                <p className="paragraph">
-                    <button className="sub_btn" type="submit">login</button>
-
-
-                </p>
-            </form>
-        
-                {/* <p><Link to="/">Back to Homepage</Link>.</p> */}
-        </div>
-        </div>
-    )
+        <hr />
+      
+      </div>
+    </div>
+  );
 }
+
+export default Login;
