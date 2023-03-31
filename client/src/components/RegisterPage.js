@@ -29,34 +29,6 @@ export default function SignUp() {
         )
     })
 
-
-export default function SignUpPage() {
-
-    const[userName, setUserName] = useState('')
-    const[password, setPassword] = useState('')
-    const[condition, setCondition] = useState('')
-    const[nurse, setNurse] = useState('')
-    const[nurses, setNurses] = useState([])
-    const[errors, setErrors] = useState([])
-
-    const navigate = useNavigate()
-
-    const signUpData = {name: userName, password: password, condition: condition, nurse_id: nurse}
-
-    useEffect(() => {
-        fetch('/nurses',{
-            mehod: 'GET'
-        })
-        .then(response => response.json())
-        .then(data => setNurses(data))
-    },[])
-
-    const allNurses = nurses.map((nurse) => {
-        return(
-            <option key={nurse.id} value={nurse.id}>{nurse.speciality}</option>
-        )
-    })
-
     function handleSignUp(e){
         e.preventDefault()
         fetch('/patients',{
@@ -132,5 +104,5 @@ export default function SignUpPage() {
     )
 
 }
-}
+
 
