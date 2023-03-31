@@ -8,7 +8,7 @@ export default function SignUpPage() {
     return (
      <div className="reg">
         <div className="text-center m-5-auto">
-            <h2 className="sign">Sign in</h2>
+            <h2 className="sign">Sign Up</h2>
             <form className="sign-form" action="/home">
                 <p>
                     <label className="user">Username</label><br/>
