@@ -7,6 +7,11 @@ import ForgetPasswordPage from './components/ForgetPasswordPage'
 export default function App() {
     return (
     <>
+    <div>
+      <h1>Central Hospital</h1>
+    </div>
+  
+
         <Router>
             <div>
                 <Routes>
