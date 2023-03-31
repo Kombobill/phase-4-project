@@ -7,15 +7,15 @@ import ForgetPasswordPage from './components/ForgetPasswordPage'
 
 export default function App() {
     return (
-            <>
-                <NavBar/>
+    <>
+        <NavBar/>
                 <Routes>
                     <Route path="/" element={ <LandingPage/> } />
                     <Route path="/login" element={ <signinPage/> } />
                     <Route path="/register" element={ <RegisterPage />} />
                     <Route path="/forget-password" element={ <ForgetPasswordPage />} />
                 </Routes>
-            </>
+        </>
     )
 }
 
