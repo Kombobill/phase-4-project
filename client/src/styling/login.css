@@ -1,14 +1,13 @@
-#signup-form{
-    padding: 40px;
+#login-form{
+    width: 400px;
     background-color: white;
+    padding: 30px;
     position: absolute;
-    left: 25%;
-    width: 40%;
-    top: 90px;
-    border-radius: 5px;
+    left: 38%;
+    top: 130px;
 }
 
-#signup-page{
+#login-page{
     background-color: rgb(219, 216, 211);
     height: 540px;
 }

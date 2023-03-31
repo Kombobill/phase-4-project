@@ -1,13 +1,14 @@
 import React from 'react'
+import '../styling/login.css'
 import { Link } from 'react-router-dom'
 
 export default function SignInPage() {
     return (
-        <div className="login-form">
+        <div id="login-page">
 
-            <h2>Log in </h2>
+            <form id='login-form' >
 
-            <form className="form" action="/home">
+                <h2 style={{textAlign: 'center'}}>Log in </h2>
 
                 <div className="row mb-3">
                     <label className="form-label">Username </label>
@@ -21,7 +22,10 @@ export default function SignInPage() {
 
                 <p>Don't have an account?<Link to='/register'> Create an account.</Link></p>
                     
-                    <button className="btn btn-primary" type="submit">login</button>
+                <div style={{textAlign: 'center'}}>
+                    <button className="btn btn-primary" type="submit" style={{width: '230px'}}>Log In</button>
+                </div>
+
             </form>
         
         </div>

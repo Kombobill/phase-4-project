@@ -40,10 +40,10 @@ export default function SignUpPage() {
                     
                 </div>
                 
-                <p>Already have an account. <Link to='/'>Back to Log in</Link></p>
+                <p>Already have an account ?<Link to='/'>Back to Log in</Link></p>
               
-                <div>
-                    <button className="btn btn-primary" type="submit">sign in</button>
+                <div style={{textAlign: 'center'}}>
+                    <button className="btn btn-primary" type="submit" style={{width: '300px'}}>Sign Up</button>
                 </div>
 
             </form>
