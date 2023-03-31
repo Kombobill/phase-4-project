@@ -1,46 +1,52 @@
 import React from 'react'
+import '../styling/register.css'
 import { Link } from 'react-router-dom'
-
-
 
 export default function SignUpPage() {
 
     return (
-     <div className="reg">
-        <div className="text-center m-5-auto">
-            <h2 className="sign">Sign Up</h2>
-            <form className="sign-form" action="/home">
-                <p>
-                    <label className="user">Username</label><br/>
-                    <input className="text-area3" type="text" placeholder="Enter username" required/>
-                </p>
-                <p>
-                    <label className="user">Password</label><br/>
-                    <input  className="text-area3"type="text" placeholder=" password" required/>
-                </p>
-                <p>
-                    <label className="user">Medical condition</label><br/>
-                    <input  className="text-area3"type="text" placeholder="Enter condition"/>
-                    <p className="user">Nurse</p>
-                    <select  className="text-area3">
-                <option value="">Select a nurse------</option>
-                <option value="option1">Clinical Nurse Specialist</option>
-                <option value="option2">Critical Care Nurse</option>
-                <option value="option3">Geriatric Nursing</option>
-                <option value="option3">Mental Health Nurse</option>
-                             </select>
-                    {/* <input type="text" placeholder="Enter Nurse Name"/> */}
-                </p>
+        <div id='signup-page'>
+            
+            <form id="signup-form">
+
+                <h2 style={{textAlign: 'center'}}>Sign Up</h2>
+
+                <div className='row mb-3'>
+                    <label className="form-label">Username</label>
+                    <input className="form-control" type="text" placeholder="Enter username" required/>
+                </div>
+
+                <div className='row mb-3'>
+                    <label className="form-label">Password</label>
+                    <input  className="form-control"type="password" placeholder=" password" required/>
+                </div>
+
+                <div className='row mb-3'>
+
+                    <div className='col-6'>
+                        <label className="form-label">Medical condition</label>
+                        <input  className="form-control"type="text" placeholder="Enter condition"/>
+                    </div>
+
+                    <div className='col-6'>
+                        <label className="form-label">Nurse</label>
+                        <select  className="form-select">
+                            <option value="option1">Clinical Nurse Specialist</option>
+                            <option value="option2">Critical Care Nurse</option>
+                            <option value="option3">Geriatric Nursing</option>
+                            <option value="option3">Mental Health Nurse</option>
+                        </select> 
+                    </div>
+                    
+                </div>
                 
+                <p>Already have an account. <Link to='/'>Back to Log in</Link></p>
               
-                <p>
-                    <button className="sub_btn" type="submit">sign in</button>
-                </p>
+                <div>
+                    <button className="btn btn-primary" type="submit">sign in</button>
+                </div>
+
             </form>
-            <footer>
-                <p className="footer"><Link to="/">Back to Login</Link>.</p>
-            </footer>
-        </div>
         </div>
     )
 
