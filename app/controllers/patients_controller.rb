@@ -18,7 +18,7 @@ class PatientsController < ApplicationController
   def reset_password
     patient = Patient.find_by(name: params[:name])
     if patient.nil?
-      render json: { error: 'User not found' }
+      render json: { error: 'User not found' }, status: :not_found
     else
       patient.update!(params.permit(:password))
       render json: patient, status: :created
@@ -41,4 +41,5 @@ class PatientsController < ApplicationController
   def record_not_found
     render json: { error: 'Patient not found' }, status: :not_found
   end
+
 end

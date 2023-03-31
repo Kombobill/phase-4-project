@@ -35,17 +35,15 @@ export default function ForgetPasswordPage() {
     return (
         <div id="forgot-password-page">
 
-            <h3 className="reset-p">To receive reset instructions:</h3>
-
             <form id='reset-password-form' onSubmit={handleResetPassword}>
 
                 <h2>Reset your password</h2>
 
                 {
                     errors.length > 0 && (
-                        <ul style={{color: 'red'}}>
+                       <ul style={{color: 'red'}}>
                             <li>{errors}</li>
-                        </ul>
+                        </ul> 
                     )
                 }
 
