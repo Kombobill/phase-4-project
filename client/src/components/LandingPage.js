@@ -1,12 +1,14 @@
 import React, {useState} from 'react'
 import '../styling/login.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function SignInPage() {
 
     const[username, setUserame] = useState('')
     const[password, setPassword] = useState('')
-    const[errors, setErrors] = useState('')
+    const[errors, setErrors] = useState([])
+
+    const navigate = useNavigate()
 
     const logInData = {name: username, password}
 
@@ -23,8 +25,9 @@ export default function SignInPage() {
         .then(response => {
             if(response.ok){
                 response.json().then(data => console.log(data))
+                navigate('/home')
             }else{
-                response.json().then(errorData => setErrors(errorData))
+                response.json().then(errorData => setErrors(errorData.error))
             }
         })
     }
@@ -35,6 +38,14 @@ export default function SignInPage() {
             <form id='login-form'onSubmit={handleLogin} >
 
                 <h2 style={{textAlign: 'center'}}>Log In </h2>
+
+                {
+                    errors.length > 0 && (
+                        <ul style={{color: 'red'}}>
+                                <li>{errors}</li>
+                        </ul>
+                    )
+                }
 
                 <div className="row mb-3">
                     <label className="form-label">Username </label>
@@ -47,7 +58,7 @@ export default function SignInPage() {
                 </div>
 
                 <p className='form-text'><Link to='/forget-password'>Forgot Passord ?</Link></p>
-                <p className='form-text'>Don't have an account?<Link to='/register'> Create an account.</Link></p>
+                <p className='form-text'>Don't have an account ?<Link to='/register'> Create an account.</Link></p>
                     
                 <div style={{textAlign: 'center'}}>
                     <button className="btn btn-primary" type="submit" style={{width: '230px'}}>Log In</button>

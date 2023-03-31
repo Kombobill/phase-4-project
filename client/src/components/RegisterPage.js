@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import '../styling/register.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function SignUpPage() {
 
@@ -10,6 +10,8 @@ export default function SignUpPage() {
     const[nurse, setNurse] = useState('')
     const[nurses, setNurses] = useState([])
     const[errors, setErrors] = useState([])
+
+    const navigate = useNavigate()
 
     const signUpData = {name: userName, password: password, condition: condition, nurse_id: nurse}
 
@@ -39,8 +41,9 @@ export default function SignUpPage() {
         .then(response => {
             if(response.ok){
                 response.json().then((newPatient) => console.log(newPatient))
+                navigate('/home')
             }else{
-                response.json().then((errorData) => setErrors(errorData))
+                response.json().then((errorData) => setErrors(errorData.errors))
             }
         })
         
@@ -52,6 +55,16 @@ export default function SignUpPage() {
             <form id="signup-form" onSubmit={handleSignUp}>
 
                 <h2 style={{textAlign: 'center'}}>Sign Up</h2>
+
+                {
+                    errors.length > 0 && (
+                        <ul style={{color: 'red'}}>{errors.map((error,index) => {
+                            return(
+                                <li key={index}>{error}</li>
+                            )
+                        })}</ul>
+                    )
+                }
 
                 <div className='row mb-3'>
                     <label className="form-label">Username</label>
