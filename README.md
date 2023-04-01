@@ -46,67 +46,51 @@
 
         -  git@github.com:Kombobill/phase-4-project.git
 
+## Project SetUp
 
-# Project SetUp
+- Run and install our dependency gems in the Gemfile in the terminal:
 
-- This project requires alot of installation as follows:
+```bash
+bundle install
+```
 
-- To install a rails application:
+- Run the migrations:
 
-        - rails new (name of the app) --skip-javascript(this command skips js)
+```bash
+rails db:migrate
+```
 
-- To run the serializer  add the following to the gemfile
+- Seed the database data:
 
-        - gem 'active_model_serializers'
+```bash
+rails db:seed
+```
 
-- To run and install our gems in the gemfile in the terminal run
+- Run the server:
 
-        - bundle install
+```bash
+rails s
+```
 
-- To generate the serializers folder and respective files on the terminal run
+## React Set-up
 
-         - rails g serializer (the name of the file you want to create in lower case)
+- To set up the React frontend:
 
- - To generate migrations which in returns both controllers and models
+```bash
+npm install --prefix client
+```
 
-          - rails g resource Hero name:string super_name:string 
+- Run the server:
 
- - To run the migrations
-
-        - rails db:migrate
-
- - To seed  data 
-
-        -  rails db:seed
-
-- To acces a the server
-
-        - rails s 
-
-# React Set-up
-- This project run in a Javascript libary react.
-
-- To work with react:
-    
-        - npm install
-    
-- create a react app 
-
-          - npx create-react-app my-app
-
-- change directory to your app
-
-         -  cd my-app         
-
-  - To run our page
-
-            - npm start  --prefix client
-
-
+```bash
+npm start --prefix client
+```
 
 # Technologies used
 
 - Ruby on Rails
+- React
+- CSS
 
 # Authors
 
@@ -121,5 +105,3 @@
 ### MIT License (ISC)
 
 [![License: ICL](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/license/mit/)
-
-
