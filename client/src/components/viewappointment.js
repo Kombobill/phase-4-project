@@ -7,6 +7,14 @@ export default function ViewAppointment(){
 
     const[appointments, setAppointments] = useState([])
     const[error, setErrors] = useState([])
+    const[name, setName] = useState('')
+
+    useEffect(() => {
+        fetch('/me')
+        .then(response => response.json())
+        .then(data => setName(data.name))
+    })
+
 
     useEffect(() => {
         fetch('/patient_appointment')
@@ -17,7 +25,7 @@ export default function ViewAppointment(){
                 response.json().then(errorData => setErrors(errorData.error))
             }
         })
-    },[appointments])
+    },[])
 
     function handleDelete(e){
         let id = e.target.value
@@ -27,6 +35,7 @@ export default function ViewAppointment(){
         .then(response => {
             if(response.ok){
                 response.json().then(data => console.log(data))
+                window.location.reload(true)
             }
         })
     }
@@ -58,7 +67,7 @@ export default function ViewAppointment(){
         <div id='all-appointments-page'> 
 
             <div id='welcome-message'>
-                <h1>Hi, name</h1>
+                <h1>Hi, {name[0].toUpperCase() + name.slice(1)}</h1>
                 <h3>Here is a list of all your appointments.</h3>
             </div>
 
