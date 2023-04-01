@@ -1,8 +1,44 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import '../styling/viewappointments.css'
 
 
 export default function ViewAppointment(){
+
+    const[appointments, setAppointments] = useState([])
+    const[error, setErrors] = useState([])
+
+    useEffect(() => {
+        fetch('/patient-appointment')
+        .then(response => {
+            if(response.ok){
+                response.json().then(data => setAppointments(data))
+            }else{
+                response.json().then(errorData => setErrors(errorData.error))
+            }
+        })
+    },[])
+
+    // const allAppointments = appointments.map((appointment) => {
+    //     return(
+    //         <tr key={appointment.id}>
+    //         <td>{appointment.id}</td>
+    //         <td>{appointment.doctor_id}</td>
+    //         <td>Patrick</td>
+    //         <td>Paeditrician</td>
+    //         <td>{appointment.date}</td>
+    //         <td>{appointment.duration}</td>
+    //         <td className='row'>
+    //             <div className='col-6'>
+    //                 <button className='btn btn-info'>Update</button>
+    //             </div>
+
+    //             <div className='col-6'>
+    //                 <button className='btn btn-danger'>Delete</button>
+    //             </div>
+    //         </td>
+    //     </tr>
+    //     )
+    // })
 
     return(
         <div id='all-appointments-page'> 
@@ -11,6 +47,16 @@ export default function ViewAppointment(){
                 <h1>Hi, name</h1>
                 <h3>Here is a list of all your appointments.</h3>
             </div>
+
+            
+
+            {
+                error.length > 0 && (
+                    <ul style={{color: 'red'}}>
+                        <li>{error}</li>
+                    </ul>
+                )
+            }
 
             <table className='table'  id='appointments-table'>
 
