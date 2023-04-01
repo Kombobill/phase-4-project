@@ -17,7 +17,7 @@ export default function App() {
                     <Route path="/register" element={ <RegisterPage />} />
                     <Route path="/forget-password" element={ <ForgetPasswordPage />} />
                     <Route path='/create-appointment' element={<CreateAppointment/>} />
-                    <Route path='/update-appointment' element={<UpdateAppointment/>} />
+                    <Route path='/update-appointment/:id' element={<UpdateAppointment/>} />
                     <Route path='/appointments' element={<ViewAppointment/>} />
                 </Routes>
     </div>
