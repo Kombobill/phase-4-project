@@ -6,16 +6,17 @@ import SignInPage from './components/SignInPage'
 import RegisterPage from './components/RegisterPage'
 import ForgetPasswordPage from './components/ForgetPasswordPage'
 
-export default function App() {
+function App() {
     return (
     <div id='app'>
         <NavBar/>
                 <Routes>
                     <Route path="/" element={ <LandingPage/> } />
-                      <Route path="/login" element={ <SignInPage/> } /> 
+                    <Route path="/login" element={ <SignInPage/> } />   
                     <Route path="/register" element={ <RegisterPage />} />
                     <Route path="/forget-password" element={ <ForgetPasswordPage />} />
                 </Routes>
     </div>
     )
 }
+export default App;
