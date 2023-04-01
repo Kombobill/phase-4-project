@@ -52,7 +52,7 @@ export default function ViewAppointment(){
             <td>{appointment.duration}</td>
             <td className='row'>
                 <div className='col-6'>
-                    <Link className='btn btn-info' to='/update-appointment'>Update</Link>
+                    <Link className='btn btn-info' to={`/update-appointment/${appointment.id}`} >Update</Link>
                 </div>
 
                 <div className='col-6'>
@@ -67,7 +67,7 @@ export default function ViewAppointment(){
         <div id='all-appointments-page'> 
 
             <div id='welcome-message'>
-                <h1>Hi, {name[0].toUpperCase() + name.slice(1)}</h1>
+                <h1>Hi, {name.slice(0,1).toUpperCase()+ name.slice(1)}</h1>
                 <h3>Here is a list of all your appointments.</h3>
             </div>
 
