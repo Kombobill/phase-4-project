@@ -2,50 +2,57 @@
 
 # Description
 
-- This is a client and API repository for an hospital management.
+- This is a client and API repository for an hospital management application.
 
 # Getting Started
 
-- In order to use this repo you need to have the following installed:
+In order to use this repository, you need to have the following installed:
 
--0 OS [either: Windows 10+, Linux or MacOS]
+- An OS [either: Windows 10+, Linux or MacOS]
 
-- Ruby - 3.1.+
+- Ruby - 3.0 or later.
 
 # Installation
 
-- To use this repo on your machine requires some simple steps
+To use this repository on your machine follow these steps.
 
-# Alternative One
+#### Alternative One
 
 - Open a terminal / command line interface on your computer
 
-- Clone the repo by using the following:
+- Clone the repo by running the following command:
 
-        -  git@github.com:Kombobill/phase-4-project.git
-
+```bash
+git clone git@github.com:Kombobill/phase-4-project.git
+```
 - Change directory to the repo folder:
 
-        - cd phase-4-project.git
+```bash
+cd phase-4-project
+```
 
 - Open it in Visual Studio Code
-
-        - code .
+```bash
+code .
+```
 
 (Alternate Option) Open it in any editor of your choice.
 
 # Alternative Two
 
 - On the top right corner of this page there is a button labelled Fork.
+<br/> <br/>
 
 - Click on that button to fork the repo to your own account.
+ <br/> <br/>
 
 - Take on the process in Alternative One above.
-
+ <br/> <br/>
 - Remember to replace your username when cloning.
 
-        -  git@github.com:Kombobill/phase-4-project.git
-
+```bash
+git@github.com:<your_username>/phase-4-password-protection-lab.git
+```
 ## Project SetUp
 
 - Run and install our dependency gems in the Gemfile in the terminal:
@@ -74,7 +81,7 @@ rails s
 
 ## React Set-up
 
-- To set up the React frontend:
+- To set up the React frontend, install the dependencies:
 
 ```bash
 npm install --prefix client
