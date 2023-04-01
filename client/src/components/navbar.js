@@ -17,7 +17,7 @@ export default function NavBar() {
     return (
         <nav className="navbar">
             <Link className="navbar-brand" to='/'>
-                <img src='/central_hospital_logo.png' alt="Central Hospital" />
+                <img src='https://raw.githubusercontent.com/Kombobill/phase-4-project/master/client/public/central_hospital_logo.jpg' alt="Central Hospital" style={{ width: '70px', height: '70px' }} />
             </Link>
             <ul className='nav justify-content-center'>
                 <li className='nav-item'>
@@ -25,10 +25,16 @@ export default function NavBar() {
                 </li>
             </ul>
             <div className='nav justify-content-end'>
+            <li className='nav-item'>
+                    <Link className='nav-link' to='/'>
+                        <i className="bi bi-house-door me-1"></i>
+                        
+                    </Link>
+                </li>
                 <li className='nav-item'>
                     <Link className='nav-link' to='/'>
                         <i className="bi bi-house-door me-1"></i>
-                        Home
+                        Log in
                     </Link>
                 </li>
                 <li className='nav-item'>
