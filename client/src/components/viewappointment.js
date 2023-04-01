@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import '../styling/viewappointments.css'
+import {Link} from 'react-router-dom'
 
 
 export default function ViewAppointment(){
@@ -46,6 +47,10 @@ export default function ViewAppointment(){
             <div id='welcome-message'>
                 <h1>Hi, name</h1>
                 <h3>Here is a list of all your appointments.</h3>
+            </div>
+
+            <div id='add-button'>
+                <Link className='btn btn-success' to='/create-appointment'><span style={{fontSize: '25px'}}>+</span>  Create Appointment</Link>
             </div>
 
             
