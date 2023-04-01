@@ -8,7 +8,7 @@
 
 - In order to use this repo you need to have the following installed:
 
--0 OS [either: Windows 10+, Linux or MacOS
+-0 OS [either: Windows 10+, Linux or MacOS]
 
 - Ruby - 3.1.+
 
@@ -112,10 +112,14 @@
 
 - This project was contributed to by:
 
-- Faith Chemutai
-- Bob Oyier
-- Brian Isaboke
-- Billgates Kombo
-- Dorothy Jebet
+- [Faith Chemutai](https://github.com/Faith-chemutai)
+- [Bob Oyier](https://github.com/oyieroyier)
+- [Brian Isaboke](https://github.com/Osorabrian)
+- [Billgates Kombo](https://github.com/Kombobill)
+- [Dorothy Jebet](https://github.com/DOROTHY2322)
+
+### MIT License (ISC)
+
+[![License: ICL](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/license/mit/)
 
 

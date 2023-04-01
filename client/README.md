@@ -7,7 +7,7 @@
 
 - In order to use this repo you need to have the following installed:
 
- - OS [either: Windows 10+, Linux or MacOS
+- OS [either: Windows 10+, Linux or MacOS]
 
 - Ruby - 3.1.+
 
@@ -54,11 +54,11 @@
     
 - create a react app 
 
-          - npx create-react-app my-app
+        - npx create-react-app my-app
 
 - change directory to your app
 
-         -  cd my-app         
+        -  cd my-app         
 
   - To run our page
 
@@ -80,11 +80,11 @@ To install the npm dependency.
 
 - This project was contributed to by:
 
-- Faith Chemutai
-- Bob Oyier
-- Brian Isaboke
-- Billgates Kombo
-- Dorothy Jebet
+- [Faith Chemutai](https://github.com/Faith-chemutai)
+- [Bob Oyier](https://github.com/oyieroyier)
+- [Brian Isaboke](https://github.com/Osorabrian)
+- [Billgates Kombo](https://github.com/Kombobill)
+- [Dorothy Jebet](https://github.com/DOROTHY2322)
 
 
 
