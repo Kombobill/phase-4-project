@@ -87,7 +87,7 @@ export default function ViewAppointment(){
                         <td>1 hour</td>
                         <td className='row'>
                             <div className='col-6'>
-                                <button className='btn btn-info'>Update</button>
+                                <Link className='btn btn-info' to='/update-appointment'>Update</Link>
                             </div>
 
                             <div className='col-6'>

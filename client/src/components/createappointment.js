@@ -32,7 +32,7 @@ export default function CreateAppointment(){
                 </div>
 
                 <div style={{textAlign: 'center'}}>
-                    <button className='btn btn-primary'>Book</button>
+                    <button className='btn btn-primary' style={{width: '150px'}}>Book</button>
                 </div>
 
             </form>
