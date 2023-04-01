@@ -9,14 +9,16 @@ class AppointmentsController < ApplicationController
       render json: appointment, status: :ok
     end
 
-    def create
-      appointment = Appointment.create!(appointment_params)
-      render json: appointment, status: :created
+    def show_appointments
+      patient = Patient.find(session[:patient_id])
+      appointments = patient.appointments
+      render json: appointments, status: :ok
     end
 
-    def show
-      appointment = Appointment.find(params[:id])
-      render json: appointment, status: :ok
+    def create_appointment
+      patient = Patient.find(session[:patient_id])
+      appointment = patient.appointments.create!(appointment_params)
+      render json: appointment, status: :created
     end
 
     def destroy

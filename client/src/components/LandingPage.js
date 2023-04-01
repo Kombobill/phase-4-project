@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import '../styling/login.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function SignInPage() {
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState([]);
+
+  const navigate  = useNavigate()
 
   const logInData = { name: username, password };
 
@@ -22,6 +24,7 @@ export default function SignInPage() {
       .then((response) => {
         if (response.ok) {
           response.json().then((data) => console.log(data));
+          navigate('/appointments')
         } else {
           response.json().then((errorData) => setErrors(errorData.error));
         }

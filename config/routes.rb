@@ -8,11 +8,15 @@ Rails.application.routes.draw do
   #patients
   put '/reset-password/:name', to: 'patients#reset_password'
   get '/me', to: 'patients#show'
-  get '/patient-appointment', to: 'patients#appointments'
+  
 
   #sessions
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
+
+  #appointments
+  post '/create_appointment', to: 'appointments#create_appointment'
+  get '/patient_appointment', to: 'appointments#show_appointments'
 
 
 end
