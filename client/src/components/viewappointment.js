@@ -17,7 +17,19 @@ export default function ViewAppointment(){
                 response.json().then(errorData => setErrors(errorData.error))
             }
         })
-    },[])
+    },[appointments])
+
+    function handleDelete(e){
+        let id = e.target.value
+        fetch(`/appointments/${id}`,{
+            method: 'DELETE'
+        })
+        .then(response => {
+            if(response.ok){
+                response.json().then(data => console.log(data))
+            }
+        })
+    }
 
     const allAppointments = appointments.map((appointment) => {
         return(
@@ -31,11 +43,11 @@ export default function ViewAppointment(){
             <td>{appointment.duration}</td>
             <td className='row'>
                 <div className='col-6'>
-                    <button className='btn btn-info'>Update</button>
+                    <Link className='btn btn-info' to='/update-appointment'>Update</Link>
                 </div>
 
                 <div className='col-6'>
-                    <button className='btn btn-danger'>Delete</button>
+                    <button className='btn btn-danger' value={appointment.id} onClick={handleDelete}>Delete</button>
                 </div>
             </td>
         </tr>
