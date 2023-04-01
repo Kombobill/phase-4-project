@@ -52,7 +52,7 @@ export default function ViewAppointment(){
             <td>{appointment.duration}</td>
             <td className='row'>
                 <div className='col-6'>
-                    <Link className='btn btn-info' to='/update-appointment'>Update</Link>
+                    <Link className='btn btn-info' to={`/update-appointment/${appointment.id}`} >Update</Link>
                 </div>
 
                 <div className='col-6'>
