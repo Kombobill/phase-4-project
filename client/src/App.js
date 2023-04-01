@@ -6,7 +6,7 @@ import SignInPage from './components/SignInPage'
 import RegisterPage from './components/RegisterPage'
 import ForgetPasswordPage from './components/ForgetPasswordPage'
 
-function App() {
+export default function App() {
     return (
     <div id='app'>
         <NavBar/>
@@ -19,4 +19,3 @@ function App() {
     </div>
     )
 }
-export default App;
