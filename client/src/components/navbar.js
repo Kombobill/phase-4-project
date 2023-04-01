@@ -1,15 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function NavBar() {
+
+    const navigate = useNavigate()
+
     function handleLogOut() {
         fetch('/logout', {
             method: 'DELETE',
         })
             .then(response => {
                 if (response.ok) {
-                    // reload the current page after logout to update the state of the app
-                    window.location.reload()
+                    navigate('/')
                 }
             })
     }

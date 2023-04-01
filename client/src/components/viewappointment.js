@@ -67,7 +67,7 @@ export default function ViewAppointment(){
         <div id='all-appointments-page'> 
 
             <div id='welcome-message'>
-                <h1>Hi, {name[0].toUpperCase() + name.slice(1)}</h1>
+                <h1>Hi, {name.slice(0,1).toUpperCase()+ name.slice(1)}</h1>
                 <h3>Here is a list of all your appointments.</h3>
             </div>
 
