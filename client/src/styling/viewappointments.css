@@ -13,6 +13,12 @@
 
 #welcome-message{
     position: absolute;
-    top: 18%;
-    left: 20%;
+        top: 18%;
+        left: 20%;
+}
+
+#add-button{
+    position: absolute;
+    top: 29%;
+    left: 70%;
 }
