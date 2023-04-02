@@ -1,6 +1,7 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
-import LandingPage from './components/LandingPage'
+import SignInPage from './components/LogInPage'
+import LandingPage from './components/landingpage'
 import NavBar from './components/navbar'
 import RegisterPage from './components/RegisterPage'
 import ForgetPasswordPage from './components/ForgetPasswordPage'
@@ -14,6 +15,7 @@ export default function App() {
         <NavBar/>
                 <Routes>
                     <Route path="/" element={ <LandingPage/> } />
+                    <Route path="/login" element={ <SignInPage/> } />
                     <Route path="/register" element={ <RegisterPage />} />
                     <Route path="/forget-password" element={ <ForgetPasswordPage />} />
                     <Route path='/create-appointment' element={<CreateAppointment/>} />
