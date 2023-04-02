@@ -62,6 +62,10 @@ group :test do
   gem "webdrivers"
 end
 
+group :development do
+    gem "rack-cors"
+end
+
 gem "active_model_serializers", "~> 0.10.13"
 
 gem "faker", "~> 3.1"
