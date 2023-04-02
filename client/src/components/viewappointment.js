@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import '../styling/viewappointments.css';
 import { Link } from 'react-router-dom';
+import {useAuth} from './auth'
 
 export default function ViewAppointment() {
 	const [appointments, setAppointments] = useState([]);
 	const [error, setErrors] = useState([]);
-	const [name, setName] = useState('');
-
-	useEffect(() => {
-		fetch('https://quikhealth-l66y.onrender.com/me')
-			.then((response) => response.json())
-			.then((data) => setName(data.name));
-	});
+	const auth = useAuth()
 
 	useEffect(() => {
 		fetch('https://quikhealth-l66y.onrender.com/patient_appointment').then((response) => {
@@ -72,7 +67,7 @@ export default function ViewAppointment() {
 	return (
 		<div id="all-appointments-page">
 			<div id="welcome-message">
-				<h1>Hi, {name.slice(0, 1).toUpperCase() + name.slice(1)}</h1>
+				<h1>Hi, {auth.user.slice(0, 1).toUpperCase() + auth.user.slice(1)}</h1>
 				<h3>Here is a list of all your appointments.</h3>
 			</div>
 

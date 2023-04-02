@@ -1,19 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import '../styling/register.css';
 import { Link, useNavigate } from 'react-router-dom';
+import {useAuth} from './auth'
 
 export default function SignUp() {
-	const [userName, setUserName] = useState('');
+
+	const [user, setuser] = useState('');
 	const [password, setPassword] = useState('');
 	const [condition, setCondition] = useState('');
 	const [nurse, setNurse] = useState('');
 	const [nurses, setNurses] = useState([]);
 	const [errors, setErrors] = useState([]);
 
+	const auth = useAuth()
+
 	const navigate = useNavigate();
 
 	const signUpData = {
-		name: userName,
+		name: user,
 		password: password,
 		condition: condition,
 		nurse_id: nurse,
@@ -46,7 +50,8 @@ export default function SignUp() {
 		}).then((response) => {
 			if (response.ok) {
 				response.json().then((newPatient) => console.log(newPatient));
-				navigate('/appointments');
+				auth.login(user)
+				navigate('/appointments', {replace: true});
 			} else {
 				response.json().then((errorData) => setErrors(errorData.errors));
 			}
@@ -67,13 +72,13 @@ export default function SignUp() {
 				)}
 
 				<div className="row mb-3">
-					<label className="form-label">Username</label>
+					<label className="form-label">user</label>
 					<input
 						className="form-control"
 						type="text"
-						placeholder="Enter username"
+						placeholder="Enter user"
 						required
-						onChange={(e) => setUserName(e.target.value)}
+						onChange={(e) => setuser(e.target.value)}
 					/>
 				</div>
 
