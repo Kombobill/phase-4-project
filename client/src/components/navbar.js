@@ -9,7 +9,7 @@ export default function NavBar() {
 	const navigate = useNavigate();
 
 	function handleLogOut() {
-		fetch('https://quikhealth-l66y.onrender.com/logout', {
+		fetch('/logout', {
 			method: 'DELETE',
             credentials: 'include'
 		}).then((response) => {

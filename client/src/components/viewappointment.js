@@ -9,7 +9,7 @@ export default function ViewAppointment() {
 	const auth = useAuth()
 
 	useEffect(() => {
-		fetch('https://quikhealth-l66y.onrender.com/patient_appointment', {
+		fetch('/patient_appointment', {
 			method: 'GET',
 			credentials: 'include'
 		}).then((response) => {
@@ -23,7 +23,7 @@ export default function ViewAppointment() {
 
 	function handleDelete(e) {
 		let id = e.target.value;
-		fetch(`https://quikhealth-l66y.onrender.com/appointments/${id}`, {
+		fetch(`/appointments/${id}`, {
 			method: 'DELETE',
 			credentials: 'include'
 		}).then((response) => {
