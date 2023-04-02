@@ -84,7 +84,7 @@ export default function ViewAppointment() {
 			)}
 
 			<table className="table" id="appointments-table">
-				<thead className="bg-primary">
+				<thead className="thead">
 					<tr className="text-light">
 						<td>No.</td>
 						<td>Doctor ID.</td>

@@ -35,7 +35,7 @@ export default function LandingPage(){
             <footer>
   <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
     <img src={logo} alt="logo" style={{height: '50px', marginBottom: '10px'}} />
-    <p>&copy; 2023 Book An Appointment. All rights reserved.</p>
+    <p>&copy; {new Date().getFullYear()} Book An Appointment. All rights reserved.</p>
   </div>
 </footer>
         </div>
