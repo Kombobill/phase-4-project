@@ -14,7 +14,7 @@ export default function ForgetPasswordPage() {
 
 	function handleResetPassword(e) {
 		e.preventDefault();
-		fetch(`/reset-password/${userName}`, {
+		fetch(`https://quikhealth-l66y.onrender.com/reset-password/${userName}`, {
 			method: 'PUT',
 			headers: {
 				'Content-Type': 'application/json',

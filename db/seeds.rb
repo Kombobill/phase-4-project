@@ -33,6 +33,8 @@ puts 'Seeding doctors'
           'Ophthalmology',
           'Psychiatry',
         ].sample,
+        phone: Faker::PhoneNumber.cell_phone_in_e164,
+        location: Faker::Address.full_address
       },
     ],
   )
