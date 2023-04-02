@@ -19,7 +19,7 @@ export default function SignInPage() {
 
 	function handleLogin(e) {
 		e.preventDefault();
-		fetch('https://quikhealth-l66y.onrender.com/login', {
+		fetch('/login', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

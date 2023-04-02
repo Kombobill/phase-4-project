@@ -7,7 +7,7 @@ export default function ViewDoctors(){
     const[search, setSearch] = useState('')
 
     useEffect(() => {
-        fetch('https://quikhealth-l66y.onrender.com/doctors', {
+        fetch('/doctors', {
             method: 'GET',
             credentials: 'include'
         })

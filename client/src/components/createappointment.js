@@ -13,7 +13,7 @@ export default function CreateAppointment() {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		fetch('https://quikhealth-l66y.onrender.com/doctors',{
+		fetch('/doctors',{
 			method: 'GET',
 			credentials: 'include'
 		})
@@ -38,7 +38,7 @@ export default function CreateAppointment() {
 
 	function handleCreate(e) {
 		e.preventDefault();
-		fetch('https://quikhealth-l66y.onrender.com/create_appointment', {
+		fetch('/create_appointment', {
 			method: 'post',
 			headers: {
 				'Content-Type': 'application/json',
