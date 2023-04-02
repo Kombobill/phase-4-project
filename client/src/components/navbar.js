@@ -3,19 +3,17 @@ import { Link, useNavigate } from 'react-router-dom';
 import logo from '../styling/logo.png'
 
 export default function NavBar() {
+	const navigate = useNavigate();
 
-    const navigate = useNavigate()
-
-    function handleLogOut() {
-        fetch('/logout', {
-            method: 'DELETE',
-        })
-            .then(response => {
-                if (response.ok) {
-                    navigate('/')
-                }
-            })
-    }
+	function handleLogOut() {
+		fetch('/logout', {
+			method: 'DELETE',
+		}).then((response) => {
+			if (response.ok) {
+				navigate('/');
+			}
+		});
+	}
 
     return (
         <nav className="navbar bg-primary">
