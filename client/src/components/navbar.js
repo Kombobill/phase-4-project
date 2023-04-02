@@ -11,6 +11,7 @@ export default function NavBar() {
 	function handleLogOut() {
 		fetch('https://quikhealth-l66y.onrender.com/logout', {
 			method: 'DELETE',
+            credentials: 'include'
 		}).then((response) => {
 			if (response.ok) {
                 auth.logout()

@@ -19,7 +19,8 @@ export default function ForgetPasswordPage() {
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify(resetData),
+			credentials: 'include',
+			body: JSON.stringify(resetData)
 		}).then((response) => {
 			if (response.ok) {
 				response.json().then((data) => console.log(data));

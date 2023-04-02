@@ -26,6 +26,7 @@ export default function SignUp() {
 	useEffect(() => {
 		fetch('https://quikhealth-l66y.onrender.com/nurses', {
 			method: 'GET',
+			credentials: 'include'
 		})
 			.then((response) => response.json())
 			.then((data) => setNurses(data));
@@ -46,6 +47,7 @@ export default function SignUp() {
 			headers: {
 				'Content-Type': 'application/json',
 			},
+			credentials: 'include',
 			body: JSON.stringify(signUpData),
 		}).then((response) => {
 			if (response.ok) {
