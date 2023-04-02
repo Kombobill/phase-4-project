@@ -24,6 +24,7 @@ export default function NavBar() {
 
             <ul className='nav justify-content-center'>
                     <Link className='nav-link text-light' to='/appointments'>Appointments</Link>
+                    <Link className='nav-link text-light' to='/doctors'>Doctors</Link>
             </ul>
 
             <ul className='nav justify-content-end'>
