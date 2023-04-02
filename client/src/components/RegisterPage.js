@@ -20,7 +20,7 @@ export default function SignUp() {
 	};
 
 	useEffect(() => {
-		fetch('/nurses', {
+		fetch('https://quikhealth-l66y.onrender.com/nurses', {
 			method: 'GET',
 		})
 			.then((response) => response.json())
@@ -37,7 +37,7 @@ export default function SignUp() {
 
 	function handleSignUp(e) {
 		e.preventDefault();
-		fetch('/patients', {
+		fetch('https://quikhealth-l66y.onrender.com/patients', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ export default function SignUp() {
 		}).then((response) => {
 			if (response.ok) {
 				response.json().then((newPatient) => console.log(newPatient));
-				navigate('/home');
+				navigate('/appointments');
 			} else {
 				response.json().then((errorData) => setErrors(errorData.errors));
 			}

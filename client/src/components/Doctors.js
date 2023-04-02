@@ -7,7 +7,7 @@ export default function ViewDoctors(){
     const[search, setSearch] = useState('')
 
     useEffect(() => {
-        fetch('/doctors')
+        fetch('https://quikhealth-l66y.onrender.com/doctors')
         .then(response => response.json())
         .then(data => setDoctors(data))
     },[])

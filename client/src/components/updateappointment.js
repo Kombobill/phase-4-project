@@ -16,7 +16,7 @@ export default function UpdateAppointment() {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		fetch('/doctors')
+		fetch('https://quikhealth-l66y.onrender.com/doctors')
 			.then((response) => response.json())
 			.then((data) => setDoctors(data));
 	}, []);
@@ -38,7 +38,7 @@ export default function UpdateAppointment() {
 
 	function handleUpdate(e) {
 		e.preventDefault();
-		fetch(`/appointments/${id}`, {
+		fetch(`https://quikhealth-l66y.onrender.com/appointments/${id}`, {
 			method: 'PUT',
 			headers: {
 				'Content-Type': 'application/json',

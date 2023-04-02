@@ -1,5 +1,4 @@
 import React from 'react'
-import { AuthProvder } from './components/auth'
 import {Routes, Route} from 'react-router-dom'
 import SignInPage from './components/LogInPage'
 import LandingPage from './components/landingpage'
