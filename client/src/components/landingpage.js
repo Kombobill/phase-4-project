@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import '../styling/landingpage.css'
 import appointmentImage from '../styling/appointment-booking.avif'
 import {useAuth} from './auth.js'
+import logo from '../styling/logo.png'
 
 export default function LandingPage(){
     const auth = useAuth()
@@ -31,8 +32,11 @@ export default function LandingPage(){
                 <p>We are a platform for booking doctor appointments online. Our mission is to make it easy and convenient for patients to find and book appointments with trusted doctors.</p>
             </div>
             <footer>
-        <p>&copy; 2023 Book Doctor Appointment. All rights reserved.</p>
-      </footer>
+  <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+    <img src={logo} alt="logo" style={{height: '50px', marginBottom: '10px'}} />
+    <p>&copy; 2023 Book An Appointment. All rights reserved.</p>
+  </div>
+</footer>
         </div>
     )
 }
