@@ -9,7 +9,10 @@ export default function ViewAppointment() {
 	const auth = useAuth()
 
 	useEffect(() => {
-		fetch('https://quikhealth-l66y.onrender.com/patient_appointment').then((response) => {
+		fetch('https://quikhealth-l66y.onrender.com/patient_appointment', {
+			method: 'GET',
+			credentials: 'include'
+		}).then((response) => {
 			if (response.ok) {
 				response.json().then((data) => setAppointments(data));
 			} else {
@@ -22,6 +25,7 @@ export default function ViewAppointment() {
 		let id = e.target.value;
 		fetch(`https://quikhealth-l66y.onrender.com/appointments/${id}`, {
 			method: 'DELETE',
+			credentials: 'include'
 		}).then((response) => {
 			if (response.ok) {
 				response.json().then((data) => console.log(data));

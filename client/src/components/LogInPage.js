@@ -24,7 +24,8 @@ export default function SignInPage() {
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify(logInData),
+			credentials: 'include',
+			body: JSON.stringify(logInData)
 		}).then((response) => {
 			if (response.ok) {
 				response.json().then((data) => console.log(data));
