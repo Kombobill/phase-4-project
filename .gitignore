@@ -3,3 +3,5 @@
 /db/development.sqlite3
 /db/test.sqlite3
 /tmp/pids/
+# Local Netlify folder
+.netlify
