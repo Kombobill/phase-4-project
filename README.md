@@ -93,6 +93,16 @@ npm install --prefix client
 npm start --prefix client
 ```
 
+## User Stories
+
+A user of the site is able to:
+1. View the homepage
+2. Register a patient with a nurse of their choice
+3. Login after signing up
+4. Display a list of all patient's appointments
+5. Book an appointment with a preferred practitioner
+6. Delete a listed appointment
+7. Logout of the session <br />
 # Technologies used
 
 - Ruby on Rails
@@ -104,10 +114,10 @@ npm start --prefix client
 - This project was contributed to by:
 
 - [Faith Chemutai](https://github.com/Faith-chemutai)
-- [Bob Oyier](https://github.com/oyieroyier)
 - [Brian Isaboke](https://github.com/Osorabrian)
-- [Billgates Kombo](https://github.com/Kombobill)
 - [Dorothy Jebet](https://github.com/DOROTHY2322)
+- [Billgates Kombo](https://github.com/Kombobill)
+- [Bob Oyier](https://github.com/oyieroyier)
 
 ### MIT License (ISC)
 
