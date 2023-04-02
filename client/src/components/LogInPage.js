@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import '../styling/login.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from './auth';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 export default function SignInPage() {
-	const [username, setUsername] = useState('');
+	
+	const [user, setuser] = useState('');
 	const [password, setPassword] = useState('');
 	const [errors, setErrors] = useState([]);
+	const auth = useAuth()
+	const location = useLocation()
+
+	const redirectPath = location.state?.path || '/appointments'
 
 	const navigate = useNavigate();
 
-	const logInData = { name: username, password };
+	const logInData = { name: user, password };
 
 	function handleLogin(e) {
 		e.preventDefault();
@@ -22,7 +28,8 @@ export default function SignInPage() {
 		}).then((response) => {
 			if (response.ok) {
 				response.json().then((data) => console.log(data));
-				navigate('/appointments');
+				auth.login(user)
+				navigate(redirectPath, {replace: true});
 			} else {
 				response.json().then((errorData) => setErrors(errorData.error));
 			}
@@ -39,13 +46,13 @@ export default function SignInPage() {
 					</ul>
 				)}
 				<div className="row mb-3">
-					<label className="form-label">Username </label>
+					<label className="form-label">user </label>
 					<input
 						className="form-control"
 						type="text"
-						placeholder="Enter username"
+						placeholder="Enter user"
 						required
-						onChange={(e) => setUsername(e.target.value)}
+						onChange={(e) => setuser(e.target.value)}
 					/>
 				</div>
 				<div className="row mb-3">
