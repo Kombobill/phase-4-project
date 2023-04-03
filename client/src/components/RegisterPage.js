@@ -20,7 +20,7 @@ export default function SignUp() {
 		name: user,
 		password: password,
 		condition: condition,
-		nurse_id: nurse,
+		nurse_id: nurse
 	};
 
 	useEffect(() => {

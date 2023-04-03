@@ -19,10 +19,10 @@ export default function LandingPage(){
                 !auth.user && (
                     <div className='row mt-2 text-center'>
                     <div className='col-4'>
-                      <Link to='/register' className='btn btn-light text-primary border-primary font-weight-bold'>Register</Link>
+                      <Link to='/register' className='btn btn-light text-primary border-primary font-weight-bold' style={{position: 'absolute', left: '-120px'}}>Register</Link>
                     </div>
                     <div className='col-4'>
-                      <Link to='/login' className='btn btn-light text-primary border-primary font-weight-bold'>Log In</Link>
+                      <Link to='/login' className='btn btn-light text-primary border-primary font-weight-bold' style={{position: 'absolute', left: '120px'}}>Log In</Link>
                     </div>
                   </div>
                   
