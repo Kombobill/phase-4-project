@@ -11,18 +11,15 @@ export default function LandingPage(){
         <div id='landng-page'>
             <img src={appointmentImage} alt="background_image" id='background-image'/>
             <div style={{marginLeft: '30px', marginTop: '8px'}}>
-                <h1 className='text-dark' style={{fontSize: '90px'}}>BOOK YOUR</h1>
-                <h1 className='text-dark' style={{fontSize: '80px'}}>APPOINTMENT</h1>
-                <h1 className='text-dark' style={{fontSize: '60px'}}>ONLINE</h1>
+                <h4 className='text-dark' style={{fontSize: '90px'}}>BOOK YOUR</h4>
+                <h4 className='text-dark' style={{fontSize: '80px'}}>APPOINTMENT</h4>
+                <h4 className='text-dark' style={{fontSize: '60px'}}>ONLINE</h4>
             </div>
             {
                 !auth.user && (
                     <div className='row mt-2 text-center'>
                     <div className='col-4'>
-                      <Link to='/register' className='btn btn-light text-primary border-primary font-weight-bold' style={{position: 'absolute', left: '-120px'}}>Register</Link>
-                    </div>
-                    <div className='col-4'>
-                      <Link to='/login' className='btn btn-light text-primary border-primary font-weight-bold' style={{position: 'absolute', left: '120px'}}>Log In</Link>
+                      <Link to='/register' className='btn btn-light text-primary border-primary font-weight-bold' style={{position: 'absolute', left: '-120px'}}>Book an appointment</Link>
                     </div>
                   </div>
                   
