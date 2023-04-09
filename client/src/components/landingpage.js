@@ -15,7 +15,7 @@ export default function LandingPage(){
                 <h4 className='text-dark' style={{fontSize: '80px'}}>APPOINTMENT</h4>
                 <h4 className='text-dark' style={{fontSize: '60px'}}>ONLINE</h4>
             </div>
-            {
+            {/* {
                 !auth.user && (
                     <div className='row mt-2 text-center'>
                     <div className='col-4'>
@@ -24,8 +24,8 @@ export default function LandingPage(){
                   </div>
                   
                 )
-            }
-            <div className='about-us-section'>
+            } */}
+            <div className='about-us-section' style = {{marginRight: "100px"}}>
                 <h2>About Us</h2>
                 <p>We are a platform for booking doctor appointments online. Our mission is to make it easy and convenient for patients to find and book appointments with trusted doctors.</p>
             </div>
